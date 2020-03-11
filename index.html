@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <h1>
+      Test canvas api demo
+    </h1>
+    <canvas id="canvas">
+      Unsupport this browser
+    </canvas>
+    <script>
+      var canvas = document.querySelector("#canvas");
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+        // 填充颜色
+        ctx.fillStyle = "red";
+        // 边框颜色
+        ctx.strokeStyle = "green";
+        // 绘制一个填充的句型
+        ctx.fillRect(25, 25, 100, 100);
+        // 绘制一个矩形的边框
+        ctx.strokeRect(50, 50, 100, 100);
+        // 清除指定的矩形区域,让清除部分完透明
+        ctx.clearRect(0, 0, 100, 100);
+      } else {
+        //canvas-unsupported code there
+      }
+    </script>
+  </body>
+</html>
